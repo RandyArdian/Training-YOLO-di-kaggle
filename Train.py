@@ -11,7 +11,7 @@ ultralytics.checks()
 !pip install numpy==1.26.4
 
 
-title Select YOLO11 🚀 logger {run: 'auto'}
+#title Select YOLO11 🚀 logger {run: 'auto'}
 logger = 'TensorBoard' #@param ['TensorBoard', 'Weights & Biases']
 
 if logger == 'TensorBoard':
