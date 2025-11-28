@@ -20,6 +20,9 @@ if logger == 'TensorBoard':
   %tensorboard --logdir .
 elif logger == 'Weights & Biases':
   !yolo settings wandb=True
+  
+#Train YOLO11n
+!yolo train model=yolo11n.pt data=coco8.yaml epochs=3 imgsz=640
 
-model = YOLO("YOLO/yolo11n_SPDConv.yaml")
-results = model.train(data="VisDrone.yaml",epochs=100,imgsz=640,resume=True)
+# Validate YOLO11n (contoh)
+!yolo val model=yolo11n.pt data=coco8.yaml
