@@ -22,7 +22,7 @@ elif logger == 'Weights & Biases':
   !yolo settings wandb=True
   
 #Train YOLO11n
-!yolo train model=yolo11n.pt data=coco8.yaml epochs=3 imgsz=640
+!yolo train model="YOLO/yolo11n.yaml" data=VisDrone.yaml epochs=100 imgsz=640 resume=True
 
 # Validate YOLO11n (contoh)
 !yolo val model=yolo11n.pt data=coco8.yaml
